@@ -1,5 +1,6 @@
 ## Introduction to RabitMQ:
 Based on : https://www.cloudamqp.com/blogs
+https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html
 
 #### What is RabitMQ:
 
