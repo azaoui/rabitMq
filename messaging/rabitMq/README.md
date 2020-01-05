@@ -46,6 +46,23 @@ An exchange accepts the message from the producer and routes them to correct mes
 The PDF processing worker (the consumer) recieves the task message and start processing the PDF.
 
 
+#### EXCHANGES :
+
+Messages are not published directly to a queue; instead, the producer sends messages to an exchange.
+An exchnage is reponsible for routing the message to different queues with the help of bindings and routing keys.
+A binding is a link beween a quee and exchange.
+
+#### Message flow in RabbitMQ :
+
+<img src="docs/exchanges-bidings-routing-keys.png">
+
+1. The producer publish message to an exchange(the exchange type must be specified)
+2. The exchange recieve the message and its now reponsible for routing the message(the exchange take different message attributes into account such as the routing key, depending to the exchange type.)
+3. Binding must be created from the exchange to queues.(in the schema there is 2 bindings to 2 different queue)
+4. The exchange routes the message into the queues depending in message attribute.
+5. The messages stay in the queue unti they are handled by a consumer.
+6. The consumer handlers the message.
+
 
 
 
