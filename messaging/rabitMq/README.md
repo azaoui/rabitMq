@@ -40,6 +40,12 @@ Low coupling between the two apllication, they will only communicate through the
 
 <img src="docs/rabbitmq-beginners-updated.png">
 
+The user sends a PDF creation request to the web application.
+The web application (the producer) sends a message to rabitMQ that includes data from the request such as name and email.
+An exchange accepts the message from the producer and routes them to correct message queues form PDF creation.
+The PDF processing worker (the consumer) recieves the task message and start processing the PDF.
+
+
 
 
 
